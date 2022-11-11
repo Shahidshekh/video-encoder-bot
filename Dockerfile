@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app 
 ENV DEBIAN_FRONTEND=noninteractive 
 ENV TZ=Asia/Kolkata 
+RUN apt -qq update --fix-missing && apt -qq upgrade
 RUN apt -qq install -y ffmpeg
 COPY requirements.txt .
 
