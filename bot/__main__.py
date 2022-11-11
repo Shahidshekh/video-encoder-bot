@@ -31,6 +31,6 @@ def encode_video(app, message):
     message.reply_text("Added to queue...", quote=True)
     data.append(message)
     if len(data) == 1:
-      add_task(message)
+      add_task(app, message)
 
 app.run()
