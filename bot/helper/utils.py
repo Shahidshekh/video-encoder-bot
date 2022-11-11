@@ -12,7 +12,7 @@ def on_task_complete():
 def add_task(app, message: Message):
     try:
       msg = message.reply_text("Downloading video...", quote=True)
-      file = [mess.document, mess.video]
+      file = [message.document, message.video]
       file_name = [fi for fi in file if fi is not None][0].file_name
       
 
