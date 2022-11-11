@@ -19,6 +19,9 @@ apt-get -qq install ffmpeg
 pip3 install -r requirements.txt
 ```
 ### Deployment
+<a href="https://heroku.com/deploy">
+<img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
 With python3.7 or later.
 ```sh
 python3 -m bot
