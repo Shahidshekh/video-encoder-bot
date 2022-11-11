@@ -19,7 +19,8 @@ def encode(filepath):
     assert(output_filepath != filepath)
     if os.path.isfile(output_filepath):
         print('Skipping "{}": file already exists'.format(output_filepath))
-        return None
+        return None 
+    print("here")
     print(filepath)
     # Get the video channel codec
     video_codec = get_codec(filepath, channel='v:0')
