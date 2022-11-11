@@ -12,6 +12,10 @@ def on_task_complete():
 def add_task(message: Message):
     try:
       msg = message.reply_text("Downloading video...", quote=True)
+      file = [mess.document, mess.video]
+      file_name = [fi for fi in file if fi is not None][0].file_name
+      
+
       filepath = message.download(file_name=download_dir)
       msg.edit("Encoding video...")
       new_file = encode(filepath)
